@@ -1,0 +1,121 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	background-image:url(background.jpg);
+	background-size:cover;
+	height:600px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.logo_h2o{
+	position:relative;
+	width:130px;
+	height:130px;
+	border:3px solid black;
+}
+
+.logo_h2o p{
+	position:absolute;
+	top:0;
+	left:3px;
+	color:white;
+	font-size:50pt;
+}
+
+.dribble{
+	position:absolute;
+	width:130px;
+	height:130px;
+	background-color:#3b9be5;
+	animation: dribble_animate 8s ease-out;
+}
+
+.face{
+	width:130px;
+	height:130px;
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+	transform: rotate(225deg);
+}
+
+.eyes{
+	display:flex;
+}
+
+.eyes div{
+	width:4px;
+	height:4px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:25px;
+	background-color:black;
+	border-radius:50%;
+}
+
+.mouth{
+	width:15px;
+	height:15px;
+	border-bottom:2px solid black;
+	border-radius:50%
+}
+
+.about{
+	position:absolute;
+	top:0;
+	right:0;
+	width:300px;
+	color:white;
+	padding:50px;
+}
+
+@keyframes dribble_animate{
+	0%{
+		bottom:0px;
+		border-radius:0 0 0 0;
+		transform:translate(0, 0) scale(1) rotate(0deg);
+	}
+	
+	5%{
+		bottom:-200px;
+		border-radius:0 0 0 0;
+		transform:translate(0, 0) scale(1) rotate(0deg);
+		background-color:#3eb3e5;
+	}
+	
+	10%{
+		bottom:-200px;
+		border-radius:50% 0 0 0;
+		transform:translate(0, 0) scale(1) rotate(45deg);
+		background-color:#40c4e5;
+	}
+	
+	15%{
+		bottom:-200px;
+		border-radius:50% 50% 0 0;
+		transform:translate(0, 0) scale(1) rotate(90deg);
+	}
+	
+	20%{
+		bottom:-200px;
+		border-radius:50% 50% 50% 0;
+		transform:translate(0, 0) scale(1) rotate(135deg);
+		background-color:#3dfffd;
+	}
+	
+	22%{
+		bottom:-200px;
+		border-radius:50% 50% 50% 0;
+		transform:translate(0, 0) scale(1) rotate(135deg);
+		background-color:#3dfffd;
+	}
+	
+	100%{
+		bottom:0px;
+	}
+}
